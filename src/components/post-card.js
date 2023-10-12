@@ -33,6 +33,7 @@ export default function PostCard({
 
 const styles = {
   card: {
+    p: '1000px',
     backgroundColor: 'white',
     boxShadow: '0px 4px 10px rgba(38,78,118,0.12)',
     borderRadius: '7px',

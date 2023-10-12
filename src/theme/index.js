@@ -9,7 +9,7 @@ export default {
     background_secondary: '#F9FBFD', // secondary background color
     border_color: '#E5ECF4', // border color
     yellow: '#FFA740', // border color
-    primary: '#EA3A60', // primary button and link color
+    primary: '#3a60c0', // primary button and link color
     secondary: '#2563FF', // secondary color - can be used for hover states
     muted: '#E4E4E4', // muted color
     accent: '#609', // a contrast color for emphasizing UI
@@ -88,7 +88,7 @@ export default {
       pt: [8, null, 9, null, null, 10],
       pb: ['90px', null, 9, null, null, 10, null, '165px'],
     },
-    feature: {
+    servico: {
       pb: [8, null, 9, null, null, 10, null, '170px'],
     },
     news: {
@@ -98,7 +98,7 @@ export default {
       pb: [8, null, 9, null, null, 10, null, '170px'],
       overflow: 'hidden',
     },
-    testimonial: {
+    Contacto: {
       pt: [8, null, 8, '70px', null, 8, null, '145px'],
       pb: ['90px', null, 9, null, null, 10, null, '190px'],
       overflow: 'hidden',
@@ -106,7 +106,7 @@ export default {
     services: {
       pb: ['90px', null, 9, null, null, 10, null, '150px'],
     },
-    pricing: {
+    about: {
       pt: [8, null, 9, null, null, 10, null, '180px'],
       pb: ['90px', null, 9, null, null, 10, null, '180px'],
     },
@@ -330,9 +330,8 @@ export default {
       borderRadius: 8,
       borderColor: 'border_color',
       height: 60,
+      border: 0,
       '&:focus': {
-        borderColor: 'primary',
-        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
         outline: 'none',
       },
     },

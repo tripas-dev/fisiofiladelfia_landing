@@ -11,12 +11,7 @@ import {
   Image,
 } from 'theme-ui';
 import { keyframes } from '@emotion/core';
-import TextFeature from 'components/text-feature';
-import ModalVideo from 'react-modal-video';
-import { IoIosPlay } from 'react-icons/io';
-
-import ServiceThumb from 'assets/service-thumb.png';
-import shapePattern from 'assets/shape-pattern1.png';
+import TextFeature from 'components/text-servico';
 
 import Smart from 'assets/services/smart.svg';
 import Secure from 'assets/services/secure.svg';
@@ -28,10 +23,10 @@ const data = {
     {
       id: 1,
       imgSrc: Smart,
-      altText: 'Smart Features',
-      title: 'Smart Features',
+      altText: 'Smart servico',
+      title: 'Smart servico',
       text:
-        'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+        'Get your blood tests delivered at let inicio collect sample from the victory of the managements. your blood tests.',
     },
     {
       id: 2,
@@ -39,7 +34,7 @@ const data = {
       altText: 'Secure Contents',
       title: 'Secure Contents',
       text:
-        'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+        'Get your blood tests delivered at let inicio collect sample from the victory of the managements. your blood tests.',
     },
   ],
 };
@@ -52,32 +47,29 @@ export default function ServiceSection() {
     setVideoOpen(true);
   };
   return (
-    <section sx={{ variant: 'section.services' }}>
+     <section sx={{ variant: 'section.services' }}>
+      <Container>
+      <TextFeature subTitle={data.subTitle} title={data.title} />
+      </Container>
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
-          <Image src={ServiceThumb} alt="Thumbnail" />
-          <Button
-            sx={styles.videoBtn}
-            onClick={handleClick}
-            aria-label="Play Button"
-          >
-            <span>
-              <IoIosPlay />
-            </span>
-          </Button>
-
-          <Box sx={styles.shapeBox}>
-            <Image src={shapePattern} alt="Shape" />
-          </Box>
+        <Grid sx={styles.grid}>
+            {data.features.map((item) => (
+              <Box sx={styles.card} key={item.id}>
+                <Image src={item.imgSrc} alt={item.altText} sx={styles.icon} />
+                <Box sx={styles.wrapper}>
+                  <Heading sx={styles.wrapper.title}>{item.title}</Heading>
+                  <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
+                </Box>
+              </Box>
+            ))}
+          </Grid>
         </Box>
         <Box sx={styles.contentBox}>
-          <TextFeature subTitle={data.subTitle} title={data.title} />
-
           <Grid sx={styles.grid}>
             {data.features.map((item) => (
               <Box sx={styles.card} key={item.id}>
                 <Image src={item.imgSrc} alt={item.altText} sx={styles.icon} />
-
                 <Box sx={styles.wrapper}>
                   <Heading sx={styles.wrapper.title}>{item.title}</Heading>
                   <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
@@ -87,12 +79,6 @@ export default function ServiceSection() {
           </Grid>
         </Box>
       </Container>
-      <ModalVideo
-        channel="youtube"
-        isOpen={videoOpen}
-        videoId="ZNA9rmDsYVE"
-        onClose={() => setVideoOpen(false)}
-      />
     </section>
   );
 }

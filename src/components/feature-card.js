@@ -39,7 +39,7 @@ const styles = {
     flexDirection: 'column',
     mt: '-5px',
     title: {
-      fontSize: [2, 3],
+      fontSize: [5, 6],
       color: 'heading_secondary',
       lineHeight: 1.4,
       fontWeight: 700,
@@ -47,7 +47,7 @@ const styles = {
     },
 
     subTitle: {
-      fontSize: [1, '15px'],
+      fontSize: '20px',
       fontWeight: 400,
       lineHeight: '1.9',
     },

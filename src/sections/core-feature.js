@@ -1,16 +1,16 @@
 /** @jsx jsx */
 import { jsx, Container, Box } from 'theme-ui';
-import TextFeature from 'components/text-feature';
+import TextFeature from 'components/text-servico';
 import Image from 'components/image';
 
-import FeatureThumb from 'assets/core-feature.png';
+import FeatureThumb from 'assets/core-servico.png';
 import shapePattern from 'assets/shape-pattern2.png';
 
 const data = {
   subTitle: 'Core features',
   title: 'Smart Jackpots that you may love this anytime & anywhere',
   description:
-    'Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.',
+    'Get your tests delivered at let inicio collect sample from the victory of the managements that supplies best design system guidelines ever.',
   btnName: 'Get Started',
   btnURL: '#',
 };

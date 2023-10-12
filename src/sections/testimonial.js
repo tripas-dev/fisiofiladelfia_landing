@@ -5,50 +5,34 @@ import Rating from 'components/rating';
 import ButtonGroup from 'components/button-group';
 import Carousel from 'react-multi-carousel';
 
-import Avatar1 from 'assets/testimonial/avatar1.png';
-import Avatar2 from 'assets/testimonial/avatar2.png';
-import Avatar3 from 'assets/testimonial/avatar3.png';
-import Avatar4 from 'assets/testimonial/avatar4.png';
-
 const data = [
   {
     id: 1,
     title: 'Modern look & trending design',
     description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar1,
-    name: 'Denny Hilguston',
-    designation: '@denny.hil',
-    review: 4,
+      'Nos diversos serviços que estive nesta clínica sempre fui bem atendido. Pessoas simpáticas e atenciosas.',
+    name: 'César oliveira',
+    review: 5,
   },
   {
     id: 2,
-    title: 'Design Quality & performance',
     description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar2,
-    name: 'Denny Hilguston',
-    designation: '@denny.hil',
+      'Todos oscolaboradores são muito atenciosos e muito preocupados com o bem estar do paciente. São muito competentes e profissionais, garantindo que o paciente tenha o melhor serviço possível.',
+    name: 'Magda pinto',
     review: 5,
   },
   {
     id: 3,
-    title: 'Layout and organized layers',
     description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar3,
-    name: 'Denny Hilguston',
-    designation: '@denny.hil',
+      'Pontual, eficaz, profissional, limpo, nada apontar, super satisfeito. ',
+    name: 'Isidro Teixeira.',
     review: 5,
   },
   {
     id: 4,
-    title: 'Modern look & trending design',
     description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar4,
-    name: 'Denny Hilguston',
-    designation: '@denny.hil',
+      'Ambiente familiar, pessoas simpáticas e profissionais. ',
+    name: 'Paula Araújo',
     review: 4,
   },
 ];
@@ -78,9 +62,9 @@ const responsive = {
 
 export default function TestimonialCard() {
   return (
-    <section id="testimonial" sx={{ variant: 'section.testimonial' }}>
-      <Container css={{ textAlign: 'center' }}>
-        <SectionHeader slogan="Testimonial" title="Meet Client Satisfaction" />
+    <section sx={{ variant: 'section.testimonial' }} id="testimonial">
+      <Container sx={styles.container} css={{ textAlign: 'center' }}>
+        <SectionHeader slogan="Testemunhas" title="Conheça a satisfação do cliente" />
       </Container>
       <Box sx={styles.carouselWrapper}>
         <Carousel
@@ -113,9 +97,6 @@ export default function TestimonialCard() {
               </Heading>
               <Text sx={styles.description}>{item.description}</Text>
               <div className="card-footer">
-                <div className="image">
-                  <Image src={item.avatar} alt="Client Image" />
-                </div>
                 <div className="reviewer-info">
                   <Heading as="h4" sx={styles.heading}>
                     {item.name}
@@ -132,13 +113,15 @@ export default function TestimonialCard() {
 }
 
 const styles = {
+  container:{
+    p:'100px',
+  },
   carouselWrapper: {
     display: 'flex',
     justifyContent: 'flex-end',
     flexDirection: 'column',
     alignItems: 'flex-end',
-    mt: '-30px',
-    px: '15px',
+    pr: '450px',
     '.carousel-container': {
       width: '100%',
       maxWidth: [

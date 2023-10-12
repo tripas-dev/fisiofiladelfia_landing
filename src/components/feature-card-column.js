@@ -39,14 +39,14 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     title: {
-      fontSize: 3,
+      fontSize: [5, 6],
       color: 'heading_secondary',
       lineHeight: 1.4,
       fontWeight: 700,
       mb: [2, null, 3],
     },
     subTitle: {
-      fontSize: 1,
+      fontSize: '20px',
       fontWeight: 400,
       lineHeight: '1.9',
     },

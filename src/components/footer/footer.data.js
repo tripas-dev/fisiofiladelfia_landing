@@ -1,54 +1,61 @@
-import Chat from 'assets/widget/chat.svg';
-import Community from 'assets/widget/community.svg';
-import Github from 'assets/widget/github.svg';
-
 export default {
-  widgets: [
+  information: [
     {
-      id: 1,
-      iconSrc: Chat,
-      altText: 'Community',
-      title: 'Join the Community',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
+      title: 'Informação',
     },
     {
-      id: 2,
-      iconSrc: Community,
-      altText: 'Chat',
-      title: 'Chat Communication',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
+      label: 'Termos e Condições',
     },
     {
-      id: 3,
-      iconSrc: Github,
-      altText: 'Github',
-      title: 'Github Access',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
+      label: 'Política de Privacidade',
+    },
+    {
+      label: 'Política e Cookies',
+    },
+    {
+      label: 'Rua senhora dos milagres, edifício Filadélfia fração H 4815-445 Vizela',
     },
   ],
-  menuItem: [
+
+  time: [
     {
-      path: '/',
-      label: 'Home',
+      title: 'Horário',
     },
     {
-      path: '/',
-      label: 'Adversite',
+      label: '08h00 às 21h00 Sábados das 09h00 às 13h00 Encerra ao Domingo',
     },
     {
-      path: '/',
-      label: 'Supports',
+      label: 'Serviço de Urgência',
     },
     {
-      path: '/',
-      label: 'Marketing',
-    },
-    {
-      path: '/',
-      label: 'Contact',
+      label: 'Sábados das 15h00 às 19h00 Domingos e Feriados das 09h00 às 19h00',
     },
   ],
-};
+
+  contact: [
+    {
+      title: 'Contactos',
+    },
+    {
+      label:'253 481 924 (Chamada rede fixa nacional)'
+    },
+    {
+      label:'253 484 798 (Chamada rede fixa nacional)'
+    },
+    {
+      label:' 914 231 021 (Chamada rede móvel nacional)'
+    },
+    {
+      label: 'geral@fisiotorres.pt',
+    },
+    
+  ],
+  social: [
+    {
+      title: 'Rede Social',
+    },
+    {
+      label:'@clinicafisiofiladelfia'
+    },
+  ],
+}

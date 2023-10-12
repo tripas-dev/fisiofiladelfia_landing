@@ -16,11 +16,11 @@ export default function PriceCard({
   return (
     <Card
       className={header ? 'package__card active' : 'package__card'}
-      sx={styles.pricingBox}
+      sx={styles.aboutBox}
     >
       {header && <Text sx={styles.header}>{header}</Text>}
       <Box>
-        <Box className="package__header" sx={styles.pricingHeader}>
+        <Box className="package__header" sx={styles.aboutHeader}>
           <Heading className="package__name" variant="title">
             {name}
           </Heading>
@@ -51,7 +51,7 @@ export default function PriceCard({
 }
 
 const styles = {
-  pricingBox: {
+  aboutBox: {
     borderRadius: 20,
     position: 'relative',
     transition: 'all 0.3s',
@@ -95,7 +95,7 @@ const styles = {
     letterSpacing: '-.14px',
     px: '12px',
   },
-  pricingHeader: {
+  aboutHeader: {
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     mb: ['30px', null, null, null, '40px'],
